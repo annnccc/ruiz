@@ -1,0 +1,70 @@
+[31-Mar-2025 19:51:22 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::prepare() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php:196
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php on line 196
+[31-Mar-2025 19:52:30 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::prepare() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php:196
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php on line 196
+[31-Mar-2025 20:14:34 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/create.php(738): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[31-Mar-2025 20:15:45 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/create.php(738): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213
+[04-Apr-2025 15:21:02 Europe/Madrid] PHP Fatal error:  Cannot redeclare mostrarAlertas() (previously declared in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/config.php:128) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/helpers/ui_helper.php on line 118
+[04-Apr-2025 15:21:03 Europe/Madrid] PHP Fatal error:  Cannot redeclare mostrarAlertas() (previously declared in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/config.php:128) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/helpers/ui_helper.php on line 118
+[04-Apr-2025 15:21:05 Europe/Madrid] PHP Fatal error:  Cannot redeclare mostrarAlertas() (previously declared in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/config.php:128) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/helpers/ui_helper.php on line 118
+[04-Apr-2025 15:21:06 Europe/Madrid] PHP Fatal error:  Cannot redeclare mostrarAlertas() (previously declared in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/config.php:128) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/helpers/ui_helper.php on line 118
+[05-Apr-2025 11:00:24 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 11:00:24 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 11:00:24 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 11:15:07 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 11:15:07 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 11:15:07 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:11 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:02:11 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:11 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:32 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:02:32 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:32 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:39 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:02:39 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:39 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:41 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:02:41 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:02:41 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:06:13 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:06:13 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:06:13 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:06:18 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:06:18 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:06:18 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:22:25 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:22:25 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:22:25 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:48:14 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:48:14 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:48:14 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:48:25 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:48:25 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:48:25 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:48:29 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:48:29 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:48:29 Europe/Madrid] Usuario es admin: ID 1, Rol: admin

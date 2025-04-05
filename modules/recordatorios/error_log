@@ -1,0 +1,13 @@
+[01-Apr-2025 16:23:39 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function isAdmin() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/recordatorios/send_reminders.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/recordatorios/send_reminders.php on line 19
+[05-Apr-2025 11:15:05 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 11:15:05 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 11:15:05 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:06:20 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:06:20 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:06:21 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:09:04 Europe/Madrid] Usuario autenticado: ID 1, Rol: admin
+[05-Apr-2025 12:09:04 Europe/Madrid] Usuario es admin: ID 1, Rol: admin
+[05-Apr-2025 12:09:04 Europe/Madrid] Usuario es admin: ID 1, Rol: admin

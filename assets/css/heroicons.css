@@ -1,0 +1,156 @@
+/* Estilos para Heroicons */
+.heroicon {
+    display: inline-flex;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+    color: currentColor;
+    position: relative;
+}
+
+/* Transición suave para cambios de color */
+.heroicon path {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Tamaños */
+.heroicon-xs {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+}
+
+.heroicon-sm {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.heroicon-md {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+}
+
+.heroicon-lg {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+
+.heroicon-xl {
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+/* Alineación en botones */
+button .heroicon,
+.btn .heroicon {
+    vertical-align: -0.125em;
+    margin-right: 0.25rem;
+}
+
+/* Alineación en alertas */
+.alert .heroicon {
+    margin-right: 0.5rem;
+}
+
+/* Colores */
+.heroicon-primary {
+    color: var(--bs-primary);
+}
+
+.heroicon-secondary {
+    color: var(--bs-secondary);
+}
+
+.heroicon-success {
+    color: var(--bs-success);
+}
+
+.heroicon-danger {
+    color: var(--bs-danger);
+}
+
+.heroicon-warning {
+    color: var(--bs-warning);
+}
+
+.heroicon-info {
+    color: var(--bs-info);
+}
+
+.heroicon-light {
+    color: var(--bs-light);
+}
+
+.heroicon-dark {
+    color: var(--bs-dark);
+}
+
+/* Animación - Girar */
+.heroicon-spin {
+    animation: heroicon-spin 2s linear infinite;
+}
+
+@keyframes heroicon-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Ajustes para el sidebar */
+.sidebar .heroicon,
+.sidebar svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    margin-right: 8px;
+    vertical-align: -0.225em;
+}
+
+.sidebar .nav-link.active .heroicon,
+.sidebar .nav-link.active svg {
+    color: #fff !important;
+}
+
+.sidebar .dropdown-toggle .heroicon.chevron-down,
+.sidebar .dropdown-toggle svg.chevron-down {
+    margin-left: auto;
+    margin-right: 0;
+    transition: transform 0.3s;
+}
+
+.sidebar .dropdown-toggle[aria-expanded="true"] .heroicon.chevron-down,
+.sidebar .dropdown-toggle[aria-expanded="true"] svg.chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Correcciones para guía de estilos */
+.guia-estilo .heroicon-xs {
+    max-height: 0.75em !important;
+    max-width: 0.75em !important;
+}
+
+.guia-estilo .heroicon-sm {
+    max-height: 1em !important;
+    max-width: 1em !important;
+}
+
+.guia-estilo .heroicon-md {
+    max-height: 1.25em !important;
+    max-width: 1.25em !important;
+}
+
+.guia-estilo .heroicon-lg {
+    max-height: 1.5em !important;
+    max-width: 1.5em !important;
+}
+
+.guia-estilo .heroicon-xl {
+    max-height: 2em !important;
+    max-width: 2em !important;
+}
+
+.guia-estilo .col .heroicon {
+    display: block;
+    margin: 0 auto;
+} 

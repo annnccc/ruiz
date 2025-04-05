@@ -1,0 +1,367 @@
+/**
+ * Archivo con funciones comunes para toda la aplicación
+ */
+
+// Inicialización de componentes al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Iniciando common.js...');
+    
+    // Inicializar tooltips de Bootstrap
+    initTooltips();
+    
+    // Inicializar datepickers
+    initDatepickers();
+    
+    // Inicializar selectores avanzados
+    initSelects();
+    
+    // Inicializar confirmaciones en botones de eliminar
+    initDeleteConfirmations();
+    
+    // Inicializar animaciones
+    initAnimations();
+    
+    // Inicializar sidebar
+    initSidebar();
+});
+
+/**
+ * Inicializa el control del sidebar
+ */
+function initSidebar() {
+    console.log('Inicializando sidebar...');
+    
+    // Toggle para el sidebar en móviles
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const sidebar = document.querySelector('.sidebar');
+    const wrapper = document.querySelector('.wrapper');
+    
+    if (toggleBtn && sidebar) {
+        // Mejorar accesibilidad agregando atributos ARIA
+        toggleBtn.setAttribute('aria-controls', 'sidebar');
+        sidebar.setAttribute('id', 'sidebar');
+        
+        const isExpanded = !sidebar.classList.contains('collapsed') && window.innerWidth >= 992;
+        toggleBtn.setAttribute('aria-expanded', isExpanded.toString());
+        toggleBtn.setAttribute('aria-label', isExpanded ? 'Colapsar menú lateral' : 'Expandir menú lateral');
+        
+        toggleBtn.addEventListener('click', function() {
+            const isNowExpanded = sidebar.classList.toggle('show');
+            toggleBtn.setAttribute('aria-expanded', isNowExpanded.toString());
+            toggleBtn.setAttribute('aria-label', isNowExpanded ? 'Colapsar menú lateral' : 'Expandir menú lateral');
+            
+            // Anunciar para lectores de pantalla
+            announceForScreenReaders(isNowExpanded ? 'Menú lateral expandido' : 'Menú lateral colapsado');
+        });
+        
+        // Añadir soporte para teclado con Escape para cerrar
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && sidebar.classList.contains('show') && window.innerWidth < 992) {
+                sidebar.classList.remove('show');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+                toggleBtn.focus(); // Devolver el foco al botón
+                announceForScreenReaders('Menú lateral cerrado');
+            }
+        });
+    }
+    
+    // Toggle para el colapso del sidebar en desktop
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    
+    if (sidebarToggle && wrapper && sidebar) {
+        // Mejorar accesibilidad agregando atributos ARIA
+        sidebarToggle.setAttribute('aria-controls', 'sidebar');
+        
+        // Restaurar estado del sidebar basado en preferencia guardada
+        const savedState = localStorage.getItem('sidebar-collapsed');
+        const isCollapsed = savedState === 'true';
+        
+        if (isCollapsed) {
+            wrapper.classList.add('sidebar-collapsed');
+            sidebar.classList.add('collapsed');
+        }
+        
+        sidebarToggle.setAttribute('aria-expanded', (!isCollapsed).toString());
+        sidebarToggle.setAttribute('aria-label', isCollapsed ? 'Expandir menú lateral' : 'Colapsar menú lateral');
+        
+        sidebarToggle.addEventListener('click', function() {
+            wrapper.classList.toggle('sidebar-collapsed');
+            const isNowCollapsed = sidebar.classList.toggle('collapsed');
+            
+            // Actualizar ARIA
+            sidebarToggle.setAttribute('aria-expanded', (!isNowCollapsed).toString());
+            sidebarToggle.setAttribute('aria-label', isNowCollapsed ? 'Expandir menú lateral' : 'Colapsar menú lateral');
+            
+            // Guardar preferencia del usuario
+            localStorage.setItem('sidebar-collapsed', isNowCollapsed);
+            
+            // Anunciar para lectores de pantalla
+            announceForScreenReaders(isNowCollapsed ? 'Menú lateral minimizado' : 'Menú lateral expandido');
+        });
+    }
+    
+    // Cerrar sidebar en móviles al hacer clic en un enlace
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    
+    if (window.innerWidth < 992) {
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (sidebar.classList.contains('show')) {
+                    sidebar.classList.remove('show');
+                    if (toggleBtn) {
+                        toggleBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
+    }
+    
+    // Cerrar sidebar en móviles al hacer clic fuera
+    document.addEventListener('click', function(event) {
+        if (window.innerWidth < 992 && 
+            sidebar && toggleBtn &&
+            !sidebar.contains(event.target) && 
+            !toggleBtn.contains(event.target) &&
+            sidebar.classList.contains('show')) {
+            sidebar.classList.remove('show');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+    
+    // Mejorar navegación por teclado dentro del sidebar
+    enhanceSidebarKeyboardNavigation(sidebar);
+}
+
+/**
+ * Función para mejorar la navegación por teclado en el sidebar
+ */
+function enhanceSidebarKeyboardNavigation(sidebar) {
+    if (!sidebar) return;
+    
+    const focusableElements = sidebar.querySelectorAll('a, button, [tabindex="0"]');
+    if (focusableElements.length === 0) return;
+    
+    // Escuchar eventos de teclado en elementos focusables
+    focusableElements.forEach(element => {
+        element.addEventListener('keydown', function(event) {
+            // Las teclas de flecha arriba/abajo para navegar entre elementos
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                event.preventDefault();
+                
+                const currentIndex = Array.from(focusableElements).indexOf(document.activeElement);
+                let targetIndex;
+                
+                if (event.key === 'ArrowDown') {
+                    targetIndex = (currentIndex + 1) % focusableElements.length;
+                } else {
+                    targetIndex = (currentIndex - 1 + focusableElements.length) % focusableElements.length;
+                }
+                
+                focusableElements[targetIndex].focus();
+            }
+        });
+    });
+}
+
+/**
+ * Función para anunciar mensajes a lectores de pantalla
+ */
+function announceForScreenReaders(message) {
+    let announcer = document.getElementById('a11y-announcer');
+    
+    // Crear el elemento anunciador si no existe
+    if (!announcer) {
+        announcer = document.createElement('div');
+        announcer.id = 'a11y-announcer';
+        announcer.setAttribute('aria-live', 'polite');
+        announcer.setAttribute('aria-atomic', 'true');
+        announcer.className = 'visually-hidden';
+        document.body.appendChild(announcer);
+    }
+    
+    // Anunciar el mensaje
+    announcer.textContent = message;
+    
+    // Limpiar después de un momento para evitar anuncios duplicados
+    setTimeout(() => {
+        announcer.textContent = '';
+    }, 3000);
+}
+
+/**
+ * Inicializa las animaciones en la página
+ */
+function initAnimations() {
+    // Hacer que los elementos con animate-fade-in aparezcan secuencialmente
+    const animatedElements = document.querySelectorAll('.animate-fade-in');
+    animatedElements.forEach((element, index) => {
+        element.style.animationDelay = (index * 0.1) + 's';
+    });
+}
+
+/**
+ * Inicializa los tooltips de Bootstrap en la página
+ */
+function initTooltips() {
+    console.log('Inicializando tooltips...');
+    
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+}
+
+/**
+ * Inicializa los datepickers en la página
+ */
+function initDatepickers() {
+    console.log('Inicializando datepickers...');
+    
+    if (typeof flatpickr !== 'undefined') {
+        flatpickr(".date-picker", {
+            locale: "es",
+            dateFormat: "d/m/Y",
+            allowInput: true
+        });
+    }
+}
+
+/**
+ * Inicializa los selectores avanzados en la página
+ */
+function initSelects() {
+    console.log('Inicializando selects avanzados...');
+    
+    if (typeof $ !== 'undefined' && typeof $.fn.select2 !== 'undefined') {
+        $('.select2').select2({
+            theme: 'bootstrap-5'
+        });
+    }
+}
+
+/**
+ * Inicializa las confirmaciones en botones de eliminar
+ */
+function initDeleteConfirmations() {
+    console.log('Inicializando confirmaciones de eliminación...');
+    
+    document.querySelectorAll('.btn-delete').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            if (!confirm('¿Está seguro de que desea eliminar este elemento?')) {
+                e.preventDefault();
+            }
+        });
+    });
+}
+
+/**
+ * Función para mostrar mensajes de alerta
+ * 
+ * @param {string} message Mensaje a mostrar
+ * @param {string} type Tipo de alerta (success, danger, warning, info)
+ */
+function showAlert(message, type = 'info') {
+    console.log('Mostrando alerta:', type, message);
+    
+    // Verificar si la librería SweetAlert2 está disponible
+    if (typeof Swal !== 'undefined') {
+        Swal.fire({
+            title: type.charAt(0).toUpperCase() + type.slice(1),
+            text: message,
+            icon: type === 'danger' ? 'error' : type,
+            confirmButtonText: 'Aceptar'
+        });
+    } else {
+        // Alternativa si SweetAlert2 no está disponible
+        alert(message);
+    }
+}
+
+/**
+ * Función para formatear fechas a formato local
+ * 
+ * @param {string} dateString Fecha en formato ISO (YYYY-MM-DD)
+ * @return {string} Fecha formateada (DD/MM/YYYY)
+ */
+function formatDate(dateString) {
+    if (!dateString) return '';
+    
+    const date = new Date(dateString);
+    return date.toLocaleDateString('es-ES', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    }).replace(/\//g, '/');
+}
+
+/**
+ * Función para formatear horas
+ * 
+ * @param {string} timeString Hora en formato HH:MM:SS
+ * @return {string} Hora formateada (HH:MM)
+ */
+function formatTime(timeString) {
+    if (!timeString) return '';
+    return timeString.substring(0, 5);
+}
+
+/**
+ * Trunca un texto a una longitud específica
+ * 
+ * @param {string} text Texto a truncar
+ * @param {number} length Longitud máxima
+ * @param {string} suffix Sufijo a añadir si se trunca
+ * @return {string} Texto truncado
+ */
+function truncateText(text, length = 100, suffix = '...') {
+    if (!text || text.length <= length) {
+        return text;
+    }
+    return text.substring(0, length) + suffix;
+}
+
+/**
+ * Array de provincias españolas
+ */
+const provinciasEspanolas = [
+    "Álava", "Albacete", "Alicante", "Almería", "Asturias", "Ávila", "Badajoz", "Barcelona", "Burgos", "Cáceres",
+    "Cádiz", "Cantabria", "Castellón", "Ciudad Real", "Córdoba", "Cuenca", "Girona", "Granada", "Guadalajara",
+    "Guipúzcoa", "Huelva", "Huesca", "Islas Baleares", "Jaén", "La Coruña", "La Rioja", "Las Palmas", "León",
+    "Lleida", "Lugo", "Madrid", "Málaga", "Murcia", "Navarra", "Ourense", "Palencia", "Pontevedra", "Salamanca",
+    "Santa Cruz de Tenerife", "Segovia", "Sevilla", "Soria", "Tarragona", "Teruel", "Toledo", "Valencia",
+    "Valladolid", "Vizcaya", "Zamora", "Zaragoza", "Ceuta", "Melilla"
+];
+
+/**
+ * Carga el listado de provincias españolas en un elemento select
+ * 
+ * @param {string} selectId - El ID del elemento select donde cargar las provincias
+ * @param {string} [provinciaSeleccionada=''] - Provincia que debe aparecer seleccionada (opcional)
+ */
+function cargarProvincias(selectId, provinciaSeleccionada = '') {
+    const selectElement = document.getElementById(selectId);
+    if (!selectElement) {
+        console.error(`El elemento con ID ${selectId} no existe en el documento`);
+        return;
+    }
+    
+    // Limpiar opciones existentes
+    selectElement.innerHTML = '<option value="">Seleccione una provincia</option>';
+    
+    // Agregar cada provincia como opción
+    provinciasEspanolas.forEach(provincia => {
+        const option = document.createElement('option');
+        option.value = provincia;
+        option.textContent = provincia;
+        
+        // Seleccionar la provincia si coincide con la proporcionada
+        if (provinciaSeleccionada && provinciaSeleccionada.toLowerCase() === provincia.toLowerCase()) {
+            option.selected = true;
+        }
+        
+        selectElement.appendChild(option);
+    });
+}
+
+// Funciones de depuración
+console.log('Script common.js cargado correctamente.'); 

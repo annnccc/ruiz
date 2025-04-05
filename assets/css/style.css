@@ -1,0 +1,1805 @@
+/* Importación de tipografías modernas */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variables de colores del tema WowDash */
+:root {
+    /* Colores principales */
+    --primary-color: #8b5cf6;
+    --primary-dark: #7c3aed;
+    --primary-light: #a78bfa;
+    --primary-rgb: 139, 92, 246;
+    --primary-hover: #7c3aed;
+    
+    /* Colores secundarios */
+    --secondary-color: #64748b;
+    --secondary-rgb: 100, 116, 139;
+    
+    /* Colores de estado */
+    --success-color: #4ade80;
+    --success-rgb: 74, 222, 128;
+    --danger-color: #ef4444;
+    --danger-rgb: 239, 68, 68;
+    --warning-color: #f97316;
+    --warning-rgb: 249, 115, 22;
+    --info-color: #3b82f6;
+    --info-rgb: 59, 130, 246;
+    
+    /* Colores de fondo */
+    --dark-color: #1e293b;
+    --light-gray: #f1f5f9;
+    --white-color: #ffffff;
+    --body-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    
+    /* Colores de texto */
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    
+    /* Colores con transparencia */
+    --primary-bg-light: rgba(var(--primary-rgb), 0.15);
+    --secondary-bg-light: rgba(var(--secondary-rgb), 0.15);
+    --success-bg-light: rgba(var(--success-rgb), 0.15);
+    --danger-bg-light: rgba(var(--danger-rgb), 0.15);
+    --warning-bg-light: rgba(var(--warning-rgb), 0.15);
+    --info-bg-light: rgba(var(--info-rgb), 0.15);
+    
+    /* Variables de espaciado y bordes */
+    --border-radius-sm: 0.375rem;
+    --border-radius: 0.375rem;
+    --border-radius-lg: 0.75rem;
+    --box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    --box-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* Variables de transición y animación */
+    --transition-speed: 0.3s;
+    --transition-base: all 0.2s ease-in-out;
+    --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Variables de layout */
+    --sidebar-width: 280px;
+    --sidebar-collapsed-width: 70px;
+    --header-height: 64px;
+    
+    /* Variables de tipografía */
+    --font-primary: 'Poppins', sans-serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    
+    /* Variables globales y tema */
+    --bg-body: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-sidebar: #ffffff;
+    --bg-header: #ffffff;
+    --bg-dropdown: #ffffff;
+    --bg-modal: #ffffff;
+    --bg-input: #ffffff;
+    --text-light: #94a3b8;
+    --text-dark: #343a40;
+}
+
+/* Variables para el tema oscuro */
+[data-theme="dark"] {
+    --primary-color: #818cf8;
+    --primary-hover: #6366f1;
+    --secondary-color: #94a3b8;
+    --success-color: #4ade80; /* Mantener el mismo verde claro */
+    --danger-color: #f87171;
+    --warning-color: #fb923c;
+    --info-color: #60a5fa;
+    
+    --text-color: #e2e8f0;
+    --text-muted: #cbd5e1;
+    --text-light: #94a3b8;
+    
+    --bg-color: #0f172a;
+    --white-color: #1e293b;
+    --light-gray: #334155;
+    --border-color: #334155;
+    
+    --bg-body: var(--bg-color);
+    --bg-card: var(--white-color);
+    --bg-sidebar: var(--white-color);
+    --bg-header: var(--white-color);
+    --bg-dropdown: var(--white-color);
+    --bg-modal: var(--white-color);
+    --bg-input: var(--white-color);
+}
+
+/* ==== ESTILOS BASE ==== */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+    transition: var(--transition-theme);
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--dark-color);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    transition: var(--transition-theme);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+/* ==== LAYOUT PRINCIPAL ==== */
+.wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 995;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    transition: all var(--transition-speed);
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.main-content {
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--transition-speed);
+}
+
+/* Sidebar colapsado en escritorio */
+body.sidebar-collapsed .sidebar {
+    width: var(--sidebar-collapsed-width);
+    min-width: var(--sidebar-collapsed-width);
+}
+
+body.sidebar-collapsed .sidebar .sidebar-brand span,
+body.sidebar-collapsed .sidebar .link-text,
+body.sidebar-collapsed .sidebar .sidebar-heading {
+    display: none;
+}
+
+body.sidebar-collapsed .main-content {
+    width: calc(100% - var(--sidebar-collapsed-width));
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+/* Estilos para el brand del sidebar */
+.sidebar-brand {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-sidebar);
+    height: 120px;
+    transition: var(--transition-theme);
+}
+
+.sidebar-brand img {
+    max-height: 96px;
+    max-width: 135.5px;
+    object-fit: contain;
+}
+
+.sidebar-brand .sidebar-brand-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    transition: all var(--transition-speed) ease;
+    white-space: nowrap;
+    margin-top: 0.35rem;
+}
+
+.sidebar.collapsed .sidebar-brand {
+    padding: 0.75rem 0.5rem;
+}
+
+.sidebar.collapsed .sidebar-brand img {
+    max-height: 36px;
+}
+
+.sidebar.collapsed .sidebar-brand-text {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Estilos para el menú del sidebar */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    margin: 4px 0;
+}
+
+/* Estilos para mejorar la apariencia de los dropdowns en el sidebar */
+.dropdown-toggle {
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 1rem);
+}
+
+.dropdown-toggle:hover {
+    background-color: var(--primary-bg-light);
+    color: var(--primary-color);
+}
+
+.dropdown-toggle[aria-expanded="true"] {
+    background-color: var(--primary-bg-light);
+    color: var(--primary-color);
+}
+
+.dropdown-toggle[aria-expanded="true"] .ms-auto {
+    transform: rotate(180deg);
+}
+
+/* Eliminar cualquier ícono duplicado o generado por Bootstrap */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Eliminar cualquier ícono duplicado */
+.dropdown-toggle span.material-symbols-rounded,
+.dropdown-toggle span.material-symbols-outlined {
+    display: none !important;
+}
+
+/* Corregir el padding en el dropdown-toggle */
+.sidebar-item .dropdown-toggle {
+    width: 100%;
+}
+
+/* Ajustes para la estructura de elementos dentro del dropdown-toggle */
+.dropdown-toggle .d-flex {
+    flex: 1;
+}
+
+.dropdown-toggle .d-flex .sidebar-icon {
+    margin-right: 0.5rem;
+}
+
+.dropdown-toggle span {
+    font-weight: 500;
+}
+
+/* Estilos para el icono chevron más limpios */
+.dropdown-toggle .ms-auto {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    width: 1rem;
+    height: 1rem;
+}
+
+.dropdown-toggle:hover .ms-auto {
+    opacity: 1;
+}
+
+.dropdown-toggle[aria-expanded="true"] .ms-auto {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all var(--transition-speed);
+    border-radius: 0.25rem;
+    margin: 0 0.5rem;
+}
+
+.sidebar-link:hover {
+    background-color: var(--primary-bg-light);
+    color: var(--primary-color);
+}
+
+.sidebar-link.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Arreglar alineación y estilos de los iconos en el sidebar */
+.sidebar-icon {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    vertical-align: -0.225em;
+}
+
+.sidebar-link.active .sidebar-icon,
+.sidebar-sublink.active .sidebar-icon {
+    color: #fff !important;
+}
+
+.sidebar-link:hover .sidebar-icon {
+    transform: translateX(2px);
+    transition: transform 0.2s ease;
+}
+
+.sidebar-item:hover .ms-auto {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-heading {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.sidebar-divider {
+    height: 0;
+    margin: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    opacity: 0.5;
+}
+
+/* Mejorar la visualización del submenú */
+.sidebar-submenu {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.sidebar-subitem {
+    margin: 0;
+    padding-left: 0;
+}
+
+.sidebar-sublink {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem 0.5rem 3.25rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all var(--transition-speed);
+    font-size: 0.95rem;
+}
+
+.sidebar-sublink:hover {
+    background-color: var(--primary-bg-light);
+    color: var(--primary-color);
+}
+
+/* Header y footer dentro del main-content */
+.main-content header,
+.main-content .footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Header styles más compacto */
+.main-content header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: var(--bg-header);
+    margin-left: 0 !important; /* Sobreescribir cualquier estilo inline */
+    transition: var(--transition-theme);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Footer más compacto */
+.footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 0;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    transition: var(--transition-theme);
+    font-size: 0.85rem;
+}
+
+/* Ajustar altura del container en el footer */
+.footer .container-fluid {
+    min-height: 40px;
+}
+
+/* Content area */
+.content {
+    flex: 1;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+/* ==== COMPONENTES UI COMUNES ==== */
+
+/* Base de iconos Material Symbols */
+.material-symbols-outlined,
+.material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 40;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle !important;
+    position: relative !important;
+    top: -1px !important;
+}
+
+/* Tamaños de iconos unificados */
+.icon-xs, .material-symbols-rounded.icon-xs {
+    font-size: 14px !important;
+}
+
+.icon-sm, .material-symbols-rounded.icon-sm, .material-symbols-rounded.small {
+    font-size: 18px !important;
+}
+
+.icon-md, .material-symbols-rounded.icon-md {
+    font-size: 24px !important;
+}
+
+.icon-lg, .material-symbols-rounded.icon-lg {
+    font-size: 32px !important;
+}
+
+.icon-xl, .material-symbols-rounded.icon-xl {
+    font-size: 48px !important;
+}
+
+/* Base para botones de iconos redondos */
+.btn-icon-base {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    color: var(--text-muted);
+    border: none;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn-icon-base:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-icon-base:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-icon-base .material-symbols-rounded {
+    font-size: 22px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+/* Aplicación de la base de icono a diferentes botones */
+.btn-icon,
+.notification-toggle,
+#themeToggle {
+    composes: btn-icon-base; /* Para CSS Modules */
+    width: 34px;
+    height: 34px;
+}
+
+/* Específico para #themeToggle, manteniendo solo lo único */
+#themeToggle {
+    width: 38px;
+    height: 38px;
+}
+
+/* Botón de toggle del sidebar - estilos específicos */
+.sidebar-toggle-fixed {
+    composes: btn-icon-base; /* Para CSS Modules */
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1060;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.sidebar-toggle-fixed:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#sidebarToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+#sidebarToggle .material-symbols-rounded {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    line-height: 1;
+}
+
+body.sidebar-collapsed #sidebarToggle {
+    transform: rotate(180deg);
+}
+
+/* Estilos para tarjetas modernas - Unificados */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--card-bg);
+    transition: var(--transition-theme), transform var(--transition-speed), box-shadow var(--transition-speed);
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-md);
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition-theme);
+}
+
+.card-body {
+    padding: 1.5rem;
+    transition: var(--transition-theme);
+}
+
+/* Módulos - Tarjetas unificadas */
+.module-card,
+.escalas-container .card,
+.bono-container .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.module-card:hover,
+.escalas-container .card:hover,
+.bono-container .card:hover {
+    transform: translateY(-5px);
+}
+
+.module-card .card-header,
+.escalas-container .card-header,
+.bono-container .card-header {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Módulos - Badges */
+.module-badge,
+.escalas-badge,
+.bono-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.85rem;
+}
+
+/* Módulos - Iconos */
+.module-icon,
+.escalas-icon,
+.bono-icon {
+    font-size: 2.5rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* Animación unificada de fade-in */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==== BOTONES ==== */
+/* Estilos base para todos los botones */
+.btn {
+    font-weight: 500;
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: width 0.3s ease;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.btn .material-symbols-rounded,
+.btn .material-symbols-outlined {
+    vertical-align: middle !important;
+    margin-right: 0.25rem !important;
+    font-size: inherit !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    position: relative !important;
+    top: -1px !important;
+}
+
+/* Variantes de botones */
+.btn-primary {
+    background-color: #a78bfa;
+    color: #ffffff;
+    border-color: #a78bfa;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.25);
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary {
+    color: #fff;
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+}
+
+.btn-secondary {
+    background-color: #94a3b8;
+    color: #ffffff;
+    border-color: #94a3b8;
+}
+
+.btn-secondary:hover {
+    background-color: #64748b;
+    color: #ffffff;
+    border-color: #64748b;
+}
+
+.btn-success {
+    background-color: #86efac;
+    color: #065f46;
+    border-color: #86efac;
+}
+
+.btn-success:hover {
+    background-color: #4ade80;
+    color: #065f46;
+    border-color: #4ade80;
+}
+
+.btn-danger {
+    background-color: #fda4af;
+    color: #881337;
+    border-color: #fda4af;
+}
+
+.btn-danger:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+}
+
+.btn-warning {
+    background-color: #fcd34d;
+    color: #78350f;
+    border-color: #fcd34d;
+}
+
+.btn-warning:hover {
+    background-color: #f97316;
+    color: #ffffff;
+    border-color: #f97316;
+}
+
+.btn-info {
+    background-color: #93c5fd;
+    color: #1e3a8a;
+    border-color: #93c5fd;
+}
+
+.btn-info:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+}
+
+.btn-light {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #f1f5f9;
+}
+
+.btn-light:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    border-color: #e2e8f0;
+}
+
+.btn-dark {
+    background-color: #334155;
+    color: #ffffff;
+    border-color: #334155;
+}
+
+.btn-dark:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+    border-color: #1e293b;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #334155;
+    border-color: #e2e8f0;
+}
+
+.btn-white:hover {
+    background-color: #f8fafc;
+    color: #1e293b;
+    border-color: #f8fafc;
+}
+
+/* Botones Outline - Unificados */
+.btn-outline {
+    background-color: transparent;
+    border-width: 1px !important;
+    border-style: solid !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover:not(:disabled) {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.btn-outline-secondary {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover:not(:disabled) {
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+
+.btn-outline-success {
+    color: var(--success-color);
+    border-color: var(--success-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline-success:hover:not(:disabled) {
+    color: #fff;
+    background-color: var(--success-color);
+}
+
+.btn-outline-danger {
+    color: var(--danger-color);
+    border-color: var(--danger-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline-danger:hover:not(:disabled) {
+    color: #fff;
+    background-color: var(--danger-color);
+}
+
+.btn-outline-warning {
+    color: var(--warning-color);
+    border-color: var(--warning-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline-warning:hover:not(:disabled) {
+    color: #212529;
+    background-color: var(--warning-color);
+}
+
+.btn-outline-info {
+    color: var(--info-color);
+    border-color: var(--info-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline-info:hover:not(:disabled) {
+    color: #fff;
+    background-color: var(--info-color);
+}
+
+/* Botones deshabilitados */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Unificación de botones de acción */
+.btn-action,
+.btn-view, 
+.btn-edit, 
+.btn-delete, 
+.btn-notify, 
+.btn-whatsapp,
+.btn-complete,
+.btn-revert {
+    border: 1px solid var(--light-gray);
+    background-color: var(--light-gray);
+    color: var(--text-muted) !important;
+    padding: 0.375rem 0.75rem;
+    margin-right: 5px;
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos de hover unificados para botones de acción */
+.table-actions .btn .material-symbols-rounded,
+.table-actions .btn .material-symbols-outlined {
+    margin: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+}
+
+/* Simplificación de estilos hover de botones de acción */
+.table-actions .btn-view:hover {
+    background-color: var(--primary-bg-light);
+    color: var(--primary-color) !important;
+    border-color: var(--primary-bg-light);
+}
+
+.table-actions .btn-edit:hover {
+    background-color: var(--warning-bg-light);
+    color: var(--warning-color) !important;
+    border-color: var(--warning-bg-light);
+}
+
+.table-actions .btn-notify:hover,
+.table-actions .btn-whatsapp:hover,
+.table-actions .btn-complete:hover {
+    background-color: var(--success-bg-light);
+    color: var(--success-color) !important;
+    border-color: var(--success-bg-light);
+}
+
+.table-actions .btn-delete:hover {
+    background-color: var(--danger-bg-light);
+    color: var(--danger-color) !important;
+    border-color: var(--danger-bg-light);
+}
+
+.table-actions .btn-revert:hover {
+    background-color: var(--secondary-bg-light);
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-bg-light);
+}
+
+/* Notification badge */
+.notification-toggle .notifications-count {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--danger-color);
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==== TABLAS ==== */
+/* Estilos unificados para tablas */
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: var(--text-color);
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.02);
+    --bs-table-active-color: var(--text-color);
+    --bs-table-active-bg: rgba(0, 0, 0, 0.03);
+    --bs-table-hover-color: var(--text-color);
+    --bs-table-hover-bg: rgba(var(--primary-rgb), 0.03);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    vertical-align: middle;
+    border-color: transparent;
+    background-color: transparent !important;
+    transition: var(--transition-theme);
+}
+
+.table > :not(caption) > * > * {
+    padding: 0.75rem 1rem;
+    border-bottom-width: 0;
+}
+
+.table > thead {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table > thead th {
+    font-weight: var(--font-semibold);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    border-bottom: none;
+    vertical-align: middle;
+    background-color: transparent !important;
+}
+
+.table > tbody td {
+    vertical-align: middle;
+    color: var(--text-color);
+    border-top: none;
+    border-bottom: none;
+    font-weight: var(--font-regular);
+}
+
+.table > tbody tr {
+    transition: all 0.3s ease;
+    background-color: transparent !important;
+}
+
+.table > tbody tr:hover {
+    background-color: var(--bs-table-hover-bg) !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--bs-table-hover-bg) !important;
+    color: var(--text-color);
+}
+
+/* Estilo para tabla sin bordes */
+.table-borderless > :not(caption) > * > * {
+    border: 0;
+}
+
+/* Estilo para tabla con líneas horizontales suaves */
+.table-light-borders > :not(caption) > * > * {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.table-light-borders > thead {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Acciones en tablas */
+.td-actions {
+    text-align: center;
+}
+
+.table-actions {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.table-actions .btn {
+    padding: 0.25rem;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+}
+
+/* Estilos para los botones de acción en tablas con Heroicons */
+.table-actions .btn .heroicon {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+    margin: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para los botones de acción en tablas */
+.table-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.btn-view, .btn-edit, .btn-delete {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-view {
+    color: var(--bs-primary);
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    border: none;
+}
+
+.btn-view:hover {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+.btn-edit {
+    color: var(--bs-success);
+    background-color: rgba(var(--bs-success-rgb), 0.1);
+    border: none;
+}
+
+.btn-edit:hover {
+    background-color: var(--bs-success);
+    color: #fff;
+}
+
+.btn-delete {
+    color: var(--bs-danger);
+    background-color: rgba(var(--bs-danger-rgb), 0.1);
+    border: none;
+}
+
+.btn-delete:hover {
+    background-color: var(--bs-danger);
+    color: #fff;
+}
+
+/* Estilos para los iconos en los botones */
+.heroicon-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Tabla moderna */
+.table-modern {
+    width: 100%;
+    margin-bottom: 0;
+    color: var(--bs-body-color);
+    vertical-align: middle;
+}
+
+.table-modern th {
+    font-weight: 600;
+    border-top: none;
+    border-bottom: 2px solid #eee;
+    padding: 0.75rem 1.25rem;
+    color: #495057;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-modern td {
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+    color: #6c757d;
+}
+
+.table-modern tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table-modern tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==== ESTILOS PARA TEMAS OSCUROS ==== */
+/* Estilos generales para modo oscuro */
+[data-theme="dark"] body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+    color: var(--text-color);
+}
+
+/* Componentes en modo oscuro */
+[data-theme="dark"] .card,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] header,
+[data-theme="dark"] footer,
+[data-theme="dark"] .toast,
+[data-theme="dark"] .input-group-text,
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .text-muted {
+    color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border {
+    border-color: var(--border-color) !important;
+}
+
+/* Formularios en modo oscuro */
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* Sidebar en modo oscuro */
+[data-theme="dark"] .sidebar-link:hover {
+    background-color: rgba(99, 102, 241, 0.15);
+}
+
+[data-theme="dark"] .sidebar-link.active {
+    background-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Tablas en modo oscuro */
+[data-theme="dark"] .table {
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.02);
+    --bs-table-hover-bg: rgba(var(--primary-rgb), 0.1);
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .table > thead {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .table > tbody tr:hover {
+    background-color: var(--bs-table-hover-bg) !important;
+}
+
+[data-theme="dark"] .table-light-borders > :not(caption) > * > * {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="dark"] .table-light-borders > thead {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover,
+[data-theme="dark"] .table-modern tbody tr:hover {
+    background-color: var(--bs-table-hover-bg) !important;
+}
+
+[data-theme="dark"] .table td, 
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table-modern th,
+[data-theme="dark"] .table-modern td {
+    border-color: var(--border-color);
+}
+
+/* Dropdown en modo oscuro */
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--light-gray);
+}
+
+[data-theme="dark"] .dropdown-item.active, 
+[data-theme="dark"] .dropdown-item:active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Colores de fondo con opacidad en modo oscuro */
+[data-theme="dark"] .bg-success.bg-opacity-10 {
+    background-color: rgba(74, 222, 128, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-warning.bg-opacity-10 {
+    background-color: rgba(251, 146, 60, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-info.bg-opacity-10 {
+    background-color: rgba(96, 165, 250, 0.15) !important;
+}
+
+[data-theme="dark"] .bg-primary.bg-opacity-10 {
+    background-color: rgba(129, 140, 248, 0.15) !important;
+}
+
+/* Estilos para TinyMCE en modo oscuro */
+[data-theme="dark"] .tox-tinymce {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .tox .tox-toolbar,
+[data-theme="dark"] .tox .tox-toolbar__overflow,
+[data-theme="dark"] .tox .tox-toolbar__primary {
+    background-color: var(--white-color);
+}
+
+[data-theme="dark"] .tox .tox-tbtn--enabled,
+[data-theme="dark"] .tox .tox-tbtn:hover {
+    background-color: var(--border-color);
+}
+
+[data-theme="dark"] .tox .tox-tbtn svg {
+    fill: var(--text-color);
+}
+
+[data-theme="dark"] .tox .tox-edit-area__iframe {
+    background-color: var(--white-color);
+}
+
+[data-theme="dark"] .tox-tinymce-aux {
+    z-index: 1500;
+}
+
+/* Notas en modo oscuro */
+[data-theme="dark"] .note-item {
+    background-color: var(--white-color);
+}
+
+[data-theme="dark"] .note-item.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .note-item.border-success {
+    border-color: var(--success-color) !important;
+}
+
+[data-theme="dark"] .note-item.border-danger {
+    border-color: var(--danger-color) !important;
+}
+
+[data-theme="dark"] .note-item.border-warning {
+    border-color: var(--warning-color) !important;
+}
+
+[data-theme="dark"] .note-item.border-info {
+    border-color: var(--info-color) !important;
+}
+
+/* Tema de iconos claro/oscuro */
+.theme-icon-light, 
+.theme-icon-dark {
+    font-variation-settings: 'FILL' 1;
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .theme-icon-light {
+    display: none;
+}
+
+[data-theme="dark"] .theme-icon-dark {
+    display: inline !important;
+    color: var(--primary-color);
+}
+
+/* Mejoras en los iconos de estado */
+.material-symbols-rounded.text-success {
+    color: var(--success-color) !important;
+}
+
+.material-symbols-rounded.text-danger {
+    color: var(--danger-color) !important;
+}
+
+/* ==== COMPONENTES ESPECÍFICOS ==== */
+
+/* Estilos para notas personales */
+.note-item {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.note-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.note-content {
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.color-selector .color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.color-selector .color-btn.active {
+    border-color: #6c757d;
+    transform: scale(1.1);
+}
+
+/* Backdrop para sidebar en móvil */
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1040;
+    display: none;
+}
+
+.sidebar-backdrop.show {
+    display: block;
+}
+
+/* Estilos para las tarjetas de estadísticas */
+.bg-success.bg-opacity-10 {
+    background-color: rgba(74, 222, 128, 0.1) !important;
+}
+
+.bg-warning.bg-opacity-10 {
+    background-color: rgba(249, 115, 22, 0.1) !important;
+}
+
+.bg-info.bg-opacity-10 {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.bg-primary.bg-opacity-10 {
+    background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Estilos para TinyMCE */
+.tox-tinymce {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.tox .tox-toolbar, 
+.tox .tox-toolbar__overflow, 
+.tox .tox-toolbar__primary {
+    background-color: #f8f9fa;
+}
+
+.tox .tox-tbtn--enabled, 
+.tox .tox-tbtn:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilos específicos para videoconsulta */
+.local-video-container {
+    position: absolute;
+    width: 25%;
+    max-width: 300px;
+    min-width: 160px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 5;
+    border: 2px solid white;
+    aspect-ratio: 16/9;
+    background-color: #333;
+}
+
+.local-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1); /* Efecto espejo */
+}
+
+.remote-video {
+    width: 100%;
+    height: 100%;
+    background-color: #2c2c2c;
+    object-fit: cover;
+}
+
+/* Reemplazar el color de text-primary */
+.text-primary {
+    color: #8b5cf6 !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+    color: #7c3aed !important;
+}
+
+/* ==== MEDIA QUERIES ==== */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .container-fluid {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .card {
+        border: 1px solid #dee2e6 !important;
+        box-shadow: none !important;
+    }
+    
+    .card-header {
+        background-color: #f8f9fa !important;
+        color: #000 !important;
+    }
+    
+    .breadcrumb, 
+    .btn, 
+    .navbar, 
+    .sidebar, 
+    footer {
+        display: none !important;
+    }
+    
+    h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    table {
+        width: 100% !important;
+    }
+    
+    .badge {
+        border: 1px solid #000 !important;
+    }
+    
+    .table-primary {
+        background-color: #cfe2ff !important;
+    }
+} 
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 280px;
+        min-width: 280px;
+        position: fixed;
+        left: -280px;
+        transform: translateX(0);
+        transition: all 0.3s;
+        z-index: 1050;
+    }
+    
+    .sidebar.show {
+        left: 0;
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        transition: all 0.3s;
+    }
+    
+    body.sidebar-collapsed .sidebar {
+        left: -280px;
+        width: 280px;
+        min-width: 280px;
+    }
+    
+    body.sidebar-collapsed .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    /* Botón de toggle para sidebar móvil */
+    .sidebar-toggle-fixed {
+        position: fixed;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 1060;
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Ajustar espaciado en el header para el botón del sidebar */
+    .main-content header {
+        padding-left: 4rem !important;
+    }
+    
+    .greeting {
+        font-size: 2rem !important;
+        line-height: 1.3;
+        margin-bottom: 1.25rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+    
+    /* Ajustes para headings y textos largos */
+    h1, .h1 {
+        font-size: 1.75rem;
+        word-break: break-word;
+    }
+    
+    h2, .h2 {
+        font-size: 1.5rem;
+        word-break: break-word;
+    }
+    
+    h3, .h3 {
+        font-size: 1.3rem;
+        word-break: break-word;
+    }
+    
+    /* Ajuste para el saludo */
+    header .greeting {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal !important;
+        font-size: 1.1rem;
+    }
+    
+    /* Ajustes para las tarjetas y tablas */
+    .card {
+        overflow-x: hidden;
+    }
+    
+    .table-responsive {
+        margin-bottom: 1rem;
+    }
+    
+    .table th, 
+    .table td {
+        white-space: normal;
+    }
+    
+    /* Ajuste para botones en móvil */
+    .btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    /* Forzar scroll horizontal en tablas cuando sea necesario */
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    /* Mejor experiencia de usuario para formularios */
+    .form-control, .form-select {
+        font-size: 16px; /* Evita zoom en iOS */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .display-4 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+    
+    h1, .h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2, .h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3, .h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Compact cards on very small devices */
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    .card-header {
+        padding: 0.75rem;
+    }
+    
+    /* Ajuste de espaciado vertical */
+    .mb-3 {
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .mt-3 {
+        margin-top: 0.75rem !important;
+    }
+    
+    /* Reducir espaciado entre elementos de lista */
+    .list-group-item {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.375rem 0.75rem;
+    }
+    
+    .container-fluid {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    .table td, .table th {
+        padding: 0.5rem;
+    }
+    
+    .notifications-dropdown {
+        width: 300px;
+    }
+}
+
+/* Estilos para los iconos Heroicons en el sidebar */
+.sidebar-icon.heroicon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+    color: inherit;
+}
+
+.sidebar-submenu .sidebar-icon.heroicon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.ms-auto.heroicon {
+    width: 1rem !important;
+    height: 1rem !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}

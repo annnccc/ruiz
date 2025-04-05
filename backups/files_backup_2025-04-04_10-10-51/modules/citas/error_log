@@ -1,0 +1,30 @@
+[31-Mar-2025 19:51:22 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::prepare() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php:196
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php on line 196
+[31-Mar-2025 19:52:30 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Database::prepare() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php:196
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/edit.php on line 196
+[31-Mar-2025 20:14:34 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/create.php(738): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[31-Mar-2025 20:15:45 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/create.php(738): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213
+[02-Apr-2025 21:20:57 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 161
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "nombre" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213
+[02-Apr-2025 21:21:04 Europe/Madrid] PHP Warning:  Undefined array key "apellidos" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/citas/view.php on line 213

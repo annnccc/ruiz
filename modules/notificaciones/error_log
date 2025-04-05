@@ -1,0 +1,5 @@
+[31-Mar-2025 19:42:29 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::getConnection() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/db.php:21
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/notificaciones/get_notifications.php(24): getDB()
+#1 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/db.php on line 21

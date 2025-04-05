@@ -1,0 +1,55 @@
+[31-Mar-2025 20:16:44 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/list.php(423): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[31-Mar-2025 20:16:57 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/list.php(423): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[31-Mar-2025 20:16:58 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/list.php(423): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[31-Mar-2025 20:17:26 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/list.php(423): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[31-Mar-2025 20:17:27 Europe/Madrid] PHP Fatal error:  Uncaught Error: Undefined constant "NOMBRE_SISTEMA" in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php:26
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(244): include()
+#1 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/functions.php(266): renderPage()
+#2 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/list.php(423): endPageContent()
+#3 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout.php on line 26
+[02-Apr-2025 21:21:15 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php:111
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/view.php(129): include()
+#1 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php on line 111
+[02-Apr-2025 21:21:46 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php:111
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/view.php(129): include()
+#1 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php on line 111
+[02-Apr-2025 21:21:47 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php:111
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/view.php(129): include()
+#1 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php on line 111
+[02-Apr-2025 21:21:56 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function activePage() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php:111
+Stack trace:
+#0 /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/pacientes/view.php(129): include()
+#1 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/layout_header.php on line 111

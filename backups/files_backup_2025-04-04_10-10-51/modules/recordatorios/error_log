@@ -1,0 +1,4 @@
+[01-Apr-2025 16:23:39 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined function isAdmin() in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/recordatorios/send_reminders.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/recordatorios/send_reminders.php on line 19

@@ -1,0 +1,88 @@
+[03-Apr-2025 20:11:29 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 20:11:33 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 20:11:34 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 20:12:21 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 20:13:56 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 20:13:57 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 20:13:57 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 20:14:30 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/setup_db.php on line 8
+[03-Apr-2025 21:53:33 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 8
+[03-Apr-2025 21:53:40 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../config/config.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 8
+[03-Apr-2025 21:56:05 Europe/Madrid] PHP Warning:  require_once(../../includes/db_connection.php): Failed to open stream: No such file or directory in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:05 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes/db_connection.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:25 Europe/Madrid] PHP Warning:  require_once(../../includes/db_connection.php): Failed to open stream: No such file or directory in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:25 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes/db_connection.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:40 Europe/Madrid] PHP Warning:  require_once(../../includes/db_connection.php): Failed to open stream: No such file or directory in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:40 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes/db_connection.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:41 Europe/Madrid] PHP Warning:  require_once(../../includes/db_connection.php): Failed to open stream: No such file or directory in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:41 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes/db_connection.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:54 Europe/Madrid] PHP Warning:  require_once(../../includes/db_connection.php): Failed to open stream: No such file or directory in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:54 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes/db_connection.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:55 Europe/Madrid] PHP Warning:  require_once(../../includes/db_connection.php): Failed to open stream: No such file or directory in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:56:55 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../../includes/db_connection.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 9
+[03-Apr-2025 21:57:35 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:57:36 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:58:00 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:58:04 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:58:30 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:58:56 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:58:57 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:06 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:06 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:32 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:33 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:34 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:34 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:34 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:35 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:35 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:35 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
+[03-Apr-2025 21:59:42 Europe/Madrid] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/includes/header.php:61) in /home/puwmiewv/app.ruizarrietapsicologia.com/ruiz/modules/escalas/index.php on line 17
